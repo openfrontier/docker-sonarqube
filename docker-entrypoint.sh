@@ -13,6 +13,7 @@ if [[ ${LDAP_URL} && ${CHECK_CONF} -eq 0 ]]; then
     echo " " >> ${CONF_HOME}
     echo "# LDAP configuration" >> ${CONF_HOME}
     echo "# General Configuration" >> ${CONF_HOME}
+    echo "sonar.web.context=/sonar" >> ${CONF_HOME}
     echo "sonar.security.realm=LDAP" >> ${CONF_HOME}
     echo "ldap.url=${LDAP_URL}" >> ${CONF_HOME}
     echo "ldap.bindDn=${BIND_DN}" >> ${CONF_HOME}
@@ -30,6 +31,7 @@ if [[ ${LDAP_URL} && ${CHECK_CONF} -eq 0 ]]; then
 elif [[ ${CHECK_CONF} -eq 0 ]]; then
     echo "# LDAP configuration" >> ${CONF_HOME}
     echo "sonar.security.realm=" >> ${CONF_HOME}
+    echo "sonar.web.context=/sonar" >> ${CONF_HOME}
 fi
 
 ${SONARQUBE_HOME}/bin/run.sh

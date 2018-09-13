@@ -20,7 +20,7 @@ ENV CSS_PLUGIN_VERSION 2.0
 # Plugins
 RUN curl -sLo ${PLUGIN_HOME}/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar  https://sonarsource.bintray.com/Distribution/sonar-java-plugin/sonar-java-plugin-${JAVA_PLUGIN_VERSION}.jar \ 
          -sLo ${PLUGIN_HOME}/sonar-javascript-plugin-${JAVASCRIPT_PLUGIN_VERSION}.jar https://sonarsource.bintray.com/Distribution/sonar-javascript-plugin/sonar-javascript-plugin-${JAVASCRIPT_PLUGIN_VERSION}.jar \
-         -sLo ${PLUGIN_HOME}/sonar-web-plugin-${WEB_PLUGIN_VERSION}.jar https://repox.sonarsource.com/sonarsource/org/sonarsource/sonar-web-plugin/sonar-web-plugin/${WEB_PLUGIN_VERSION}/sonar-web-plugin-${WEB_PLUGIN_VERSION}.jar \ 
+#         -sLo ${PLUGIN_HOME}/sonar-web-plugin-${WEB_PLUGIN_VERSION}.jar https://repox.sonarsource.com/sonarsource/org/sonarsource/sonar-web-plugin/sonar-web-plugin/${WEB_PLUGIN_VERSION}/sonar-web-plugin-${WEB_PLUGIN_VERSION}.jar \
          -sLo ${PLUGIN_HOME}/sonar-xml-plugin-${XML_PLUGIN_VERSION}.jar https://repox.sonarsource.com/sonarsource/org/sonarsource/xml/sonar-xml-plugin/${XML_PLUGIN_VERSION}/sonar-xml-plugin-${XML_PLUGIN_VERSION}.jar \
          -sLo ${PLUGIN_HOME}/sonar-csharp-plugin-${CSHARP_PLUGIN_VERSION}.jar https://sonarsource.bintray.com/Distribution/sonar-csharp-plugin/sonar-csharp-plugin-${CSHARP_PLUGIN_VERSION}.jar \
          -sLo ${PLUGIN_HOME}/sonar-l10n-zh-plugin-${ZH_PLUGIN_VERSION}.jar https://github.com/SonarQubeCommunity/sonar-l10n-zh/releases/download/sonar-l10n-zh-plugin-${ZH_PLUGIN_VERSION}/sonar-l10n-zh-plugin-${ZH_PLUGIN_VERSION}.jar \ 
