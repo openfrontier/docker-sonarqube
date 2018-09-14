@@ -13,7 +13,7 @@ if [[ ${LDAP_URL} && ${CHECK_CONF} -eq 0 ]]; then
     echo "ldap.bindPassword=${LDAP_BINDPASSWORD}" >> ${CONF_HOME}
     echo "ldap.user.baseDn=${LDAP_USER_BASEDN}" >> ${CONF_HOME}
     echo "ldap.user.request=${LDAP_USER_REQUEST}" >> ${CONF_HOME}
-    echo "ldap.user.realNameAttribute=cn" >> ${CONF_HOME}
+    echo "ldap.user.realNameAttribute=displayName" >> ${CONF_HOME}
     echo "ldap.user.emailAttribute=mail" >> ${CONF_HOME}
     echo "ldap.group.baseDn=${LDAP_GROUP_BASEDN}" >> ${CONF_HOME}
     echo "ldap.group.request=${LDAP_GROUP_REQUEST}" >> ${CONF_HOME}
