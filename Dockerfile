@@ -14,7 +14,8 @@ ENV JAVA_PLUGIN_VERSION=4.0 \
     GIT_PLUGIN_VERSION=1.2 \
     SVN_PLUGIN_VERSION=1.3 \
     WIDGET_LAB_PLUGIN_VERSION=1.8.1 \
-    CSS_PLUGIN_VERSION=2.0
+    CSS_PLUGIN_VERSION=2.0 \
+    TS_PLUGIN_VERSION=0.98
 
 # Install plugins
 RUN set -x && rm -rf $SONARQUBE_HOME/lib/bundled-plugins/*.jar && \
@@ -32,9 +33,9 @@ RUN set -x && rm -rf $SONARQUBE_HOME/lib/bundled-plugins/*.jar && \
   curl -sSOL http://sonarsource.bintray.com/Distribution/sonar-widget-lab-plugin/sonar-widget-lab-plugin-${WIDGET_LAB_PLUGIN_VERSION}.jar && \
   curl -sSOL https://github.com/SonarQubeCommunity/sonar-l10n-zh/releases/download/sonar-l10n-zh-plugin-${ZH_PLUGIN_VERSION}/sonar-l10n-zh-plugin-${ZH_PLUGIN_VERSION}.jar && \
   curl -sSOL https://github.com/SonarQubeCommunity/sonar-css/releases/download/${CSS_PLUGIN_VERSION}/sonar-css-plugin.jar && \
-  curl -sSOL https://github.com/Pablissimo/SonarTsPlugin/releases/download/v0.98/sonar-typescript-plugin-0.98-SNAPSHOT.zip && \
-  unzip sonar-typescript-plugin-0.98-SNAPSHOT.zip && \
-  rm -rf sonar-typescript-plugin-0.98-SNAPSHOT.zip
+  curl -sSOL https://github.com/Pablissimo/SonarTsPlugin/releases/download/v${TS_PLUGIN_VERSION}/sonar-typescript-plugin-${TS_PLUGIN_VERSION}-SNAPSHOT.zip && \
+  unzip sonar-typescript-plugin-${TS_PLUGIN_VERSION}-SNAPSHOT.zip && \
+  rm -rf sonar-typescript-plugin-${TS_PLUGIN_VERSION}-SNAPSHOT.zip
 
 RUN sed -i '/java -jar lib/a \
     -Dsonar.web.context="$SONAR_WEB_CONTEXT" \ 
