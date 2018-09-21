@@ -39,6 +39,7 @@ RUN set -x && rm -rf $SONARQUBE_HOME/lib/bundled-plugins/*.jar && \
 
 RUN sed -i '/java -jar lib/a \
     -Dsonar.web.context="$SONAR_WEB_CONTEXT" \ 
+    -Dsonar.security.localUsers="$SONAR_SECURITY_LOCALUSERS" \
     -Dsonar.security.realm="$SONAR_SECURITY_REALM" \
     -Dldap.bindDn="$LDAP_BINDDN" \
     -Dldap.bindPassword="$LDAP_BINDPASSWORD" \
